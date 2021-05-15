@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{252CEE0E-FDFA-4293-A476-8C06727942E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FamilyLoan2020.DAL</RootNamespace>
+    <AssemblyName>FamilyLoan2020.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomConfiguration\BankConfig.cs" />
+    <Compile Include="CustomConfiguration\LoanItemConfig.cs" />
+    <Compile Include="CustomConfiguration\LoanRequestConfig.cs" />
+    <Compile Include="CustomConfiguration\PasswordHistoryConfig.cs" />
+    <Compile Include="CustomConfiguration\PaymentConfig.cs" />
+    <Compile Include="CustomConfiguration\PaymentTypeConfig.cs" />
+    <Compile Include="CustomConfiguration\PersonConfig.cs" />
+    <Compile Include="CustomConfiguration\SettingConfig.cs" />
+    <Compile Include="CustomConfiguration\UserConfig.cs" />
+    <Compile Include="CustomConvention\CodeConvention.cs" />
+    <Compile Include="CustomConvention\DateTimeConvention.cs" />
+    <Compile Include="CustomConvention\IDConvention.cs" />
+    <Compile Include="CustomConvention\MaxStringConvention.cs" />
+    <Compile Include="CustomDatabaseInitializer\FamilyLoanContextInitializer.cs" />
+    <Compile Include="ExtensionMethod\IQueryExt.cs" />
+    <Compile Include="FamilyLoan2020Context.cs" />
+    <Compile Include="CustomConfiguration\LoanConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Base\CodeRepository.cs" />
+    <Compile Include="Repository\Base\IdentityRepository.cs" />
+    <Compile Include="Repository\Base\IUnitOfWork.cs" />
+    <Compile Include="Repository\Entity\BankRepository.cs" />
+    <Compile Include="Repository\Entity\LoanItemRepository.cs" />
+    <Compile Include="Repository\Entity\LoanRepository.cs" />
+    <Compile Include="Repository\Entity\LoanRequestRepository.cs" />
+    <Compile Include="Repository\Entity\PasswordHistoryRepository.cs" />
+    <Compile Include="Repository\Entity\PaymentRepository.cs" />
+    <Compile Include="Repository\Entity\PaymentTypeRepository.cs" />
+    <Compile Include="Repository\Entity\PersonRepository.cs" />
+    <Compile Include="Repository\Base\Repository.cs" />
+    <Compile Include="Repository\Entity\SettingRepository.cs" />
+    <Compile Include="Repository\Base\UnitOfWork.cs" />
+    <Compile Include="Repository\Entity\UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyLoan2020.Models\FamilyLoan2020.Models.csproj">
+      <Project>{D14F5816-A2B5-4246-9473-690144127FBE}</Project>
+      <Name>FamilyLoan2020.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sadr_Tools\Sadr_Tools.csproj">
+      <Project>{4844af61-75a5-4b33-905b-9fe5f527f976}</Project>
+      <Name>Sadr_Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>

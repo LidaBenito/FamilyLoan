@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA62FD73-A527-4F65-8377-8563EF1315CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FamilyLoan2020.UI</RootNamespace>
+    <AssemblyName>FamilyLoan2020.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DateTimeSelector, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SharedDlls\DateTimeSelector.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>SharedDlls\EntityFramework.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SharedDlls\EntityFramework.SqlServer.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForms\BaseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\BaseFrm.Designer.cs">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\FormTools.cs" />
+    <Compile Include="BaseForms\IBaseFormMethod.cs" />
+    <Compile Include="BaseForms\IBaseFormProperty.cs" />
+    <Compile Include="BaseForms\ReportFiles.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIForms\BankFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\BankFrm.Designer.cs">
+      <DependentUpon>BankFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\ChangePasswordFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\ChangePasswordFrm.Designer.cs">
+      <DependentUpon>ChangePasswordFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\LoanFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\LoanFrm.Designer.cs">
+      <DependentUpon>LoanFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\LoanHomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\LoanHomeFrm.Designer.cs">
+      <DependentUpon>LoanHomeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\LoanRequestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\LoanRequestFrm.Designer.cs">
+      <DependentUpon>LoanRequestFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\LoanRequestListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\LoanRequestListFrm.Designer.cs">
+      <DependentUpon>LoanRequestListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\LottaryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\LottaryFrm.Designer.cs">
+      <DependentUpon>LottaryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\PaymentHomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\PaymentHomeFrm.Designer.cs">
+      <DependentUpon>PaymentHomeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\PaymentFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\PaymentFrm.Designer.cs">
+      <DependentUpon>PaymentFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\PaymentSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\PaymentSearchFrm.Designer.cs">
+      <DependentUpon>PaymentSearchFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\PaymentTypeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\PaymentTypeFrm.Designer.cs">
+      <DependentUpon>PaymentTypeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\PersonFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\PersonFrm.Designer.cs">
+      <DependentUpon>PersonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\ReportHomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\ReportHomeFrm.Designer.cs">
+      <DependentUpon>ReportHomeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\SettingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\SettingFrm.Designer.cs">
+      <DependentUpon>SettingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\UserAccountHomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\UserAccountHomeFrm.Designer.cs">
+      <DependentUpon>UserAccountHomeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\UserFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\UserFrm.Designer.cs">
+      <DependentUpon>UserFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\WelcomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\WelcomeFrm.Designer.cs">
+      <DependentUpon>WelcomeFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForms\BaseFrm.resx">
+      <DependentUpon>BaseFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UIForms\BankFrm.resx">
+      <DependentUpon>BankFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\ChangePasswordFrm.resx">
+      <DependentUpon>ChangePasswordFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LoanFrm.resx">
+      <DependentUpon>LoanFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LoanHomeFrm.resx">
+      <DependentUpon>LoanHomeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LoanRequestFrm.resx">
+      <DependentUpon>LoanRequestFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LoanRequestListFrm.resx">
+      <DependentUpon>LoanRequestListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LottaryFrm.resx">
+      <DependentUpon>LottaryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\PaymentHomeFrm.resx">
+      <DependentUpon>PaymentHomeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\PaymentFrm.resx">
+      <DependentUpon>PaymentFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\PaymentSearchFrm.resx">
+      <DependentUpon>PaymentSearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\PaymentTypeFrm.resx">
+      <DependentUpon>PaymentTypeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\PersonFrm.resx">
+      <DependentUpon>PersonFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\ReportHomeFrm.resx">
+      <DependentUpon>ReportHomeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\SettingFrm.resx">
+      <DependentUpon>SettingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\UserAccountHomeFrm.resx">
+      <DependentUpon>UserAccountHomeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\UserFrm.resx">
+      <DependentUpon>UserFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\WelcomeFrm.resx">
+      <DependentUpon>WelcomeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Numeric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loan_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoanRequest_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoanRequest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToDoList_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRUD_Buttons\CRUD_Buttons.csproj">
+      <Project>{3d353123-e425-4671-bad8-add209fe8c09}</Project>
+      <Name>CRUD_Buttons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnumListBox\EnumListBox.csproj">
+      <Project>{0a2e2bac-e69b-40e4-b325-d4b10f06248c}</Project>
+      <Name>EnumListBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyLoan2020.DAL\FamilyLoan2020.DAL.csproj">
+      <Project>{252cee0e-fdfa-4293-a476-8c06727942e9}</Project>
+      <Name>FamilyLoan2020.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyLoan2020.Models\FamilyLoan2020.Models.csproj">
+      <Project>{d14f5816-a2b5-4246-9473-690144127fbe}</Project>
+      <Name>FamilyLoan2020.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sadr_Custom_Controls\EnumComboBox\EnumComboBox.csproj">
+      <Project>{686d2530-0271-4c06-ab8c-370b5f420aa4}</Project>
+      <Name>EnumComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sadr_Custom_Controls\GenericDataGrid\GenericDataGrid.csproj">
+      <Project>{e7df3a0a-3bad-48be-92cb-4b64a135dab2}</Project>
+      <Name>GenericDataGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sadr_Custom_Controls\NumericTextBox\NumericTextBox.csproj">
+      <Project>{e48ba14e-6b17-405f-a3db-395eead5f477}</Project>
+      <Name>NumericTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sadr_Custom_Controls\ParsiTextBox\ParsiTextBox.csproj">
+      <Project>{3f8b7d0d-79d0-4941-88b1-f7022a495a31}</Project>
+      <Name>ParsiTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sadr_Custom_Controls\StringTextBox\StringTextBox.csproj">
+      <Project>{477502db-a41a-44b8-8e0b-8cc64f46ea42}</Project>
+      <Name>StringTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sadr_Tools\Sadr_Tools.csproj">
+      <Project>{4844af61-75a5-4b33-905b-9fe5f527f976}</Project>
+      <Name>Sadr_Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentBill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaymentBill_64x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserAccount_64x1.PNG" />
+    <None Include="Resources\UserAccount1.PNG" />
+    <None Include="Resources\User_64x1.png" />
+    <None Include="Resources\ToDoList_64x1.png" />
+    <None Include="Resources\Settings_64x1.png" />
+    <None Include="Resources\Settings1.png" />
+    <None Include="Resources\Search_64x1.png" />
+    <None Include="Resources\Report_64x.png" />
+    <None Include="Resources\Report.png" />
+    <None Include="Resources\Person_64x1.png" />
+    <None Include="Resources\Person1.png" />
+    <None Include="Resources\PaymentBill_64x1.png" />
+    <None Include="Resources\PaymentBill1.png" />
+    <None Include="Resources\Payment_64x1.png" />
+    <None Include="Resources\Payment1.png" />
+    <None Include="Resources\Numeric1.png" />
+    <None Include="Resources\LoanRequest_64x1.png" />
+    <None Include="Resources\LoanRequest1.png" />
+    <None Include="Resources\Loan_64x1.png" />
+    <None Include="Resources\Loan1.png" />
+    <None Include="Resources\List_64x1.png" />
+    <None Include="Resources\List1.png" />
+    <None Include="Resources\Error_32x.png" />
+    <None Include="Resources\favicon.ico" />
+    <None Include="Resources\UserAccount_64x.PNG" />
+    <None Include="Resources\UserAccount.PNG" />
+    <None Include="Resources\User_64x.png" />
+    <None Include="Resources\android-chrome-192x192.png" />
+    <None Include="Resources\favicon-32x32.png" />
+    <None Include="Resources\favicon-16x16.png" />
+    <None Include="Resources\apple-touch-icon.png" />
+    <None Include="Resources\android-chrome-512x512.png" />
+    <None Include="Resources\ChangePassvvord_64x.png" />
+    <None Include="Resources\Aggregate_64x.png" />
+    <None Include="Resources\Avatar_Female.PNG" />
+    <None Include="Resources\Avatar_Male.PNG" />
+    <None Include="Resources\bg1.png" />
+    <None Include="Resources\ChangePassvvord_64x1.png" />
+    <None Include="Resources\Date1.png" />
+    <Content Include="Resources\dollar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
